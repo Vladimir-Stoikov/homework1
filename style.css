@@ -7,6 +7,9 @@
 }
 
 .page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: Inter;
   font-style: normal;
 }
@@ -14,6 +17,7 @@
 .page__body {
   position: relative;
   display: grid;
+  grid-gap: 0;
   grid-template-columns: repeat(4, min-content);
   grid-template-rows: repeat(3, min-content);
   grid-template-areas:
@@ -25,25 +29,27 @@
 
 .info {
   grid-area: info;
+  width: 458px;
+  height: 473px;
+  text-align: center;
 }
 
 .main-title {
-
+  margin: 125px 0 0 65px;
   color: #000;
   font-size: 64px;
   font-weight: 600;
   line-height: 110%;
   height: 140px;
-  width: 330px;
+  width: 100%;
   text-align: start;
-
 }
 
 .social {
   margin-top: 137px;
 }
 
-.social__icon {
+.social__icon:not(:last-child) {
   margin-right: 24px;
 }
 
@@ -87,20 +93,23 @@
 }
 
 .woman-smile {
+  grid-area: picture-2;
   width: 226px;
   height: 288px;
   object-fit: cover;
 }
 
 .asian-girl {
+  grid-area: picture-3;
   width: 232px;
   height: 288px;
   object-fit: cover;
+  z-index: 1;
 }
 
 .red-area {
   grid-area: placeholder;
-  width: 232px;
+  width: 100%;
   height: 185px;
   background: #A61C1C;
 }
@@ -110,4 +119,83 @@
   width: 232px;
   height: 248px;
   object-fit: cover;
+}
+
+@media (max-width: 992px) {
+  .page__body {
+    grid-template-columns: repeat(3, min-content);
+    grid-template-rows: repeat(4, min-content);
+    grid-template-areas:
+    "info      picture-1   picture-2"
+    "info      picture-1   picture-4"
+    "desc      picture-5   picture-4"
+    "picture-3 placeholder picture-6"  ;
+  }
+
+  .asian-man {
+    height: 100%;
+    width: 100%;
+  }
+
+  .red-area {
+    grid-column-start: picture-3;
+    height: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+    .page__body {
+    grid-template-columns: repeat(2, min-content);
+    grid-template-rows: repeat(5, min-content);
+    grid-template-areas:
+    "info      picture-1"
+    "info      picture-1"
+    "desc      picture-5"
+    "picture-2 picture-3"
+    "picture-4 placeholder"
+    "picture-4 picture-6";
+  }
+
+  .woman-smile {
+    width: 100%;
+    object-fit: cover;
+}
+
+  .asian-girl {
+    width: 100%;
+  }
+
+  .doors {
+    width: 100%;
+    height: 100%;
+  }
+
+  .red-area {
+    grid-column-start: picture-3;
+    height: 200px;
+  }
+}
+
+@media (max-width: 320px) {
+  .page__body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page__body > * {
+    width: 100%;
+  }
+
+  .main-title {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 110%;
+    text-align: center;
+    width: 100vw;
+    margin: 100px auto 0;
+  }
+
+  .description {
+    padding: 3rem ;
+  }
 }
