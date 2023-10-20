@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Nunito&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.page {
+  font-family: Inter;
+  font-style: normal;
+}
+
+.page__body {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, min-content);
+  grid-template-rows: repeat(3, min-content);
+  grid-template-areas:
+  "info picture-1 picture-2 picture-3"
+  "info picture-1 picture-4 placeholder"
+  "desc picture-5 picture-4 picture-6";
+  background-color: #F9F9F9;
+}
+
+.info {
+  grid-area: info;
+}
+
+.main-title {
+
+  color: #000;
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 110%;
+  height: 140px;
+  width: 330px;
+  text-align: start;
+
+}
+
+.social {
+  margin-top: 137px;
+}
+
+.social__icon {
+  margin-right: 24px;
+}
+
+.description {
+  grid-area: desc;
+  background-color: #828282;
+  padding: 95px 48px 64px 65px;
+  width: 458px;
+  height: 247px;
+  color: #F2F2F2;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.woman-with-hat {
+  grid-area: picture-1;
+  width: 364px;
+  height: 473px;
+  object-fit: cover;
+}
+
+.coffee-area {
+  grid-area: picture-5;
+  width: 364px;
+  height: 247px;
+  background: #A6806B;
+}
+
+.coffee-cup {
+  width: 199px;
+  height: 247px;
+  object-fit: cover;
+}
+
+.doors {
+  grid-area: picture-4;
+  width: 226px;
+  height: 433px;
+  object-fit: cover;
+}
+
+.woman-smile {
+  width: 226px;
+  height: 288px;
+  object-fit: cover;
+}
+
+.asian-girl {
+  width: 232px;
+  height: 288px;
+  object-fit: cover;
+}
+
+.red-area {
+  grid-area: placeholder;
+  width: 232px;
+  height: 185px;
+  background: #A61C1C;
+}
+
+.asian-man {
+  grid-area: picture-6;
+  width: 232px;
+  height: 248px;
+  object-fit: cover;
+}
