@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&family=Nunito&display=swap');
 
 * {
   padding: 0;
@@ -31,7 +31,6 @@
   grid-area: info;
   width: 458px;
   height: 473px;
-  text-align: center;
 }
 
 .main-title {
@@ -47,10 +46,11 @@
 
 .social {
   margin-top: 137px;
+  margin-left: 158px;
 }
 
 .social__icon:not(:last-child) {
-  margin-right: 24px;
+  margin-right: 20px;
 }
 
 .description {
@@ -62,7 +62,7 @@
   color: #F2F2F2;
   font-size: 18px;
   font-weight: 300;
-  line-height: normal;
+  line-height: 125%;
 }
 
 .woman-with-hat {
@@ -132,6 +132,14 @@
     "picture-3 placeholder picture-6"  ;
   }
 
+  .info {
+    text-align: center;
+  }
+
+  .main-title {
+  text-align: center;
+  margin-left: 0;
+}
   .asian-man {
     height: 100%;
     width: 100%;
@@ -188,8 +196,6 @@
 
   .main-title {
     font-size: 3rem;
-    font-weight: 600;
-    line-height: 110%;
     text-align: center;
     width: 100vw;
     margin: 100px auto 0;
