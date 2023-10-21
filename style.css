@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&family=Nunito&display=swap');
 
+
 * {
   padding: 0;
   margin: 0;
@@ -14,22 +15,26 @@
   font-style: normal;
 }
 
-.page__body {
+.main {
   position: relative;
   display: grid;
   grid-gap: 0;
-  grid-template-columns: repeat(4, min-content);
+  grid-template-columns: 1.79fr 1.41fr 0.89fr 0.9fr;
   grid-template-rows: repeat(3, min-content);
   grid-template-areas:
   "info picture-1 picture-2 picture-3"
   "info picture-1 picture-4 placeholder"
   "desc picture-5 picture-4 picture-6";
   background-color: #F9F9F9;
+  max-width: 1280px;
+}
+
+.main__photo {
+  width: 100%;
 }
 
 .info {
   grid-area: info;
-  width: 458px;
   height: 473px;
 }
 
@@ -40,12 +45,11 @@
   font-weight: 600;
   line-height: 110%;
   height: 140px;
-  width: 100%;
   text-align: start;
 }
 
 .social {
-  margin-top: 137px;
+  margin-top: 29.85%;
   margin-left: 158px;
 }
 
@@ -57,8 +61,7 @@
   grid-area: desc;
   background-color: #828282;
   padding: 95px 48px 64px 65px;
-  width: 458px;
-  height: 247px;
+  max-height: 247px;
   color: #F2F2F2;
   font-size: 18px;
   font-weight: 300;
@@ -67,41 +70,36 @@
 
 .woman-with-hat {
   grid-area: picture-1;
-  width: 364px;
   height: 473px;
   object-fit: cover;
 }
 
 .coffee-area {
   grid-area: picture-5;
-  width: 364px;
   height: 247px;
   background: #A6806B;
 }
 
 .coffee-cup {
-  width: 199px;
-  height: 247px;
+  width: 54.9%;
+  height: 100%;
   object-fit: cover;
 }
 
 .doors {
   grid-area: picture-4;
-  width: 226px;
   height: 433px;
   object-fit: cover;
 }
 
 .woman-smile {
   grid-area: picture-2;
-  width: 226px;
   height: 288px;
   object-fit: cover;
 }
 
 .asian-girl {
   grid-area: picture-3;
-  width: 232px;
   height: 288px;
   object-fit: cover;
   z-index: 1;
@@ -109,27 +107,25 @@
 
 .red-area {
   grid-area: placeholder;
-  width: 100%;
   height: 185px;
   background: #A61C1C;
 }
 
 .asian-man {
   grid-area: picture-6;
-  width: 232px;
   height: 248px;
   object-fit: cover;
 }
 
 @media (max-width: 992px) {
-  .page__body {
-    grid-template-columns: repeat(3, min-content);
+  .main {
+    grid-template-columns: 1.79fr 1.41fr 0.89fr;
     grid-template-rows: repeat(4, min-content);
     grid-template-areas:
     "info      picture-1   picture-2"
     "info      picture-1   picture-4"
     "desc      picture-5   picture-4"
-    "picture-3 placeholder picture-6"  ;
+    "picture-3 placeholder picture-6";
   }
 
   .info {
@@ -137,33 +133,32 @@
   }
 
   .main-title {
-  text-align: center;
-  margin-left: 0;
-}
+    text-align: center;
+    margin-left: 0;
+    }
 
-.social {
-  margin-left: 0;
-  text-align: center;
-}
+  .social {
+    margin-left: 0;
+    text-align: center;
+  }
 
-.woman-with-hat {
-  height: 100%;
-}
-
-  .asian-man {
-    height: 100%;
-    width: 100%;
+  .description {
+    padding: 3rem ;
   }
 
   .red-area {
     grid-column-start: picture-3;
     height: 100%;
   }
+
+  .main__photo {
+    height: 100%;
+  }
 }
 
 @media (max-width: 768px) {
-    .page__body {
-    grid-template-columns: repeat(2, min-content);
+  .main {
+    grid-template-columns: 1.79fr 1.41fr;
     grid-template-rows: repeat(5, min-content);
     grid-template-areas:
     "info      picture-1"
@@ -174,44 +169,29 @@
     "picture-4 picture-6";
   }
 
-  .woman-smile {
-    width: 100%;
-    object-fit: cover;
-}
-
-  .asian-girl {
-    width: 100%;
-  }
-
-  .doors {
-    width: 100%;
-    height: 100%;
+  .main-title {
+    font-size: 3rem;
+    text-align: center;
   }
 
   .red-area {
-    grid-column-start: picture-3;
-    height: 200px;
+    height: 180px;
   }
+
 }
 
 @media (max-width: 320px) {
-  .page__body {
+  .main {
     display: flex;
     flex-direction: column;
   }
 
-  .page__body > * {
-    width: 100%;
-  }
-
   .main-title {
-    font-size: 3rem;
-    text-align: center;
     width: 100vw;
     margin: 100px auto 0;
   }
 
-  .description {
-    padding: 3rem ;
-  }
+  .coffee-area {
+    height: 200px;
+}
 }
