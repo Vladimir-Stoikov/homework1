@@ -18,7 +18,6 @@
 .main {
   position: relative;
   display: grid;
-  grid-gap: 0;
   grid-template-columns: 1.79fr 1.41fr 0.89fr 0.9fr;
   grid-template-rows: repeat(3, min-content);
   grid-template-areas:
@@ -120,7 +119,7 @@
 @media (max-width: 992px) {
   .main {
     grid-template-columns: 1.79fr 1.41fr 0.89fr;
-    grid-template-rows: repeat(4, min-content);
+    grid-template-rows: 288px 185px 247px 288px;
     grid-template-areas:
     "info      picture-1   picture-2"
     "info      picture-1   picture-4"
@@ -159,7 +158,7 @@
 @media (max-width: 768px) {
   .main {
     grid-template-columns: 1.79fr 1.41fr;
-    grid-template-rows: repeat(5, min-content);
+    grid-template-rows: repeat(6, max-content);
     grid-template-areas:
     "info      picture-1"
     "info      picture-1"
