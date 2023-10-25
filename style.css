@@ -19,7 +19,7 @@
   position: relative;
   display: grid;
   grid-template-columns: 1.79fr 1.41fr 0.89fr 0.9fr;
-  grid-template-rows: repeat(3, min-content);
+  grid-template-rows: repeat(3, max-content);
   grid-template-areas:
   "info picture-1 picture-2 picture-3"
   "info picture-1 picture-4 placeholder"
